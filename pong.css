@@ -12,16 +12,13 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  #game    { width: 600px; height: 600px; }
+  #game    { margin-left: 6em; width: 600px; height: 600px; }
 }
 
 @media screen and (min-width: 1600px) {
-  #game    {  width: 1024px; height: 768px; }
+  #game    {  margin-left: 8em; width: 1024px; height: 768px; }
 }
 
-#game {
-  margin-left: 8em;
-}
 #sidebar {
   display: block;
 }
