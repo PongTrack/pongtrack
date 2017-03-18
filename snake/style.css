@@ -1,0 +1,51 @@
+body {
+    margin: auto;
+    padding : 0;
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 15px;
+    background-color: #f8f8f8;
+}
+#sidebar {
+  display: block;
+}
+
+video, canvas {
+  position: absolute;
+  margin-left: 12px;
+}
+
+.left {
+  float: left;
+}
+
+#sidebar {
+  border-radius: 5px;
+  width: 18em;
+  height: 25em;
+  font-size: 0.9em;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  padding: 1em;
+  color: black;
+}
+#sidebar h2 {
+  text-align: center;
+  margin: 0;
+}
+#sidebar .settings {
+  line-height: 1.2em;
+  height: 1.2em;
+}
+#sidebar .settings label {
+   vertical-align: middle;
+}
+#sidebar .settings input {
+  vertical-align: middle;
+}
+
+.centrat {
+  vertical-align: middle;
+  left: 30%;
+}

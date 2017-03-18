@@ -59,9 +59,11 @@ function setColor_p1(color){
   if (colorActual_p1 == color){
     tracker_p1.setColors([]);
     colorActual_p1 = null;
+    document.getElementById("color_pl1").style.backgroundColor = color;
   } else {
     tracker_p1.setColors([color]);
     colorActual_p1 = color;
+    document.getElementById("color_pl1").style.backgroundColor = color;
   }
 }
 
@@ -70,9 +72,11 @@ function setColor_p2(color){
   if (colorActual_p2 == color){
     tracker_p2.setColors([]);
     colorActual_p2 = null;
+    document.getElementById("color_pl2").style.backgroundColor = color;
   } else {
     tracker_p2.setColors([color]);
     colorActual_p2 = color;
+    document.getElementById("color_pl2").style.backgroundColor = color;
   }
 }
 

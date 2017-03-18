@@ -191,6 +191,7 @@ Pong = {
     },
 
     declareWinner: function(playerNo) {
+      document.getElementById('startButton').style.visibility = "visible";
       this.winner = playerNo;
     },
 
@@ -608,7 +609,7 @@ Pong = {
         pos.y = this.minY;
         pos.dy = -pos.dy;
       }
-    
+
       this.setpos(pos.x,  pos.y);
       //this.setdir(pos.dx, pos.dy);
       //this.footprint();
