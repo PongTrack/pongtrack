@@ -24,7 +24,7 @@ window.onload = function() {
       context_p1.strokeRect(rect.x, rect.y, rect.width, rect.height);
       context_p1.font = '11px Helvetica';
       context_p1.fillStyle = "#fff";
-      next_move_p1 = ((rect.y*pong.Defaults.height)/canvas.height);
+      next_move_p1 = ((rect.y*pong.Defaults.height)/canvas_p1.height);
       pong.leftPaddle.setpos(pong.leftPaddle.x, next_move_p1);
       context_p1.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
       context_p1.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
@@ -44,7 +44,7 @@ window.onload = function() {
       context_p2.strokeStyle = rect.color;
       context_p2.strokeRect(rect.x, rect.y, rect.width, rect.height);
       context_p2.font = '11px Helvetica';
-      next_move_p2 = ((rect.y*pong.Defaults.height)/canvas.height);
+      next_move_p2 = ((rect.y*pong.Defaults.height)/canvas_p2.height);
       pong.leftPaddle.setpos(pong.leftPaddle.x, next_move_p2);
       context_p2.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
       context_p2.fillStyle = "#fff";
