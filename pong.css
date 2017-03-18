@@ -16,14 +16,11 @@ body {
 }
 
 @media screen and (min-width: 1600px) {
-  #game    { width: 1024px; height: 768px; }
+  #game    { margin-left: 8em; width: 1024px; height: 768px; }
 }
 
 #sidebar {
   display: block;
-}
-#game {
-  margin-left: 8em;
 }
 
 video, canvas {
