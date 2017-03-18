@@ -5,6 +5,8 @@ Game.ready(function() {
 });
 
 var tracker;
+var pl1_y = 0;
+var next_move = 0;
 window.onload = function() {
   var video = document.getElementById('video');
   var canvas = document.getElementById('canvas');
@@ -20,7 +22,11 @@ window.onload = function() {
       context.fillStyle = "#fff";
       //MOVE Y
       //console.log(pong.Defaults.height);
-      console.log((rect.y*pong.Defaults.height)/canvas.height);
+      next_move = ((rect.y*pong.Defaults.height)/canvas.height);
+      console.log(next_move + "  " + pl1_y);
+      pong.leftPaddle.setpos(pong.leftPaddle.x, next_move);
+
+      pong.Paddle.up = (rect.y*pong.Defaults.height)/canvas.height;
       context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
       context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
     });
