@@ -285,7 +285,7 @@
 
   if (!navigator.getUserMedia) {
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
-    navigator.mediaDevices.getUserMedia || navigator.msGetUserMedia;
+    navigator.mozGetUserMedia || navigator.msGetUserMedia;
   }
 }(window));
 
