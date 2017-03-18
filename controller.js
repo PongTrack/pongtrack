@@ -76,4 +76,17 @@ function setColor_p2(color){
   }
 }
 
+function startGame(){
+  if (colorActual_p1 != null && colorActual_p2 != null){
+    // 2 Players
+    document.getElementById('startButton').style.visibility = "hidden";
+    pong.start(2);
+  } else if (colorActual_p1 != null){
+    // 1 Player
+    document.getElementById('startButton').style.visibility = "hidden";
+    pong.start(1);
+  }
+}
+
+
 //document.getElementById('yellow').addEventListener("click", myScript);

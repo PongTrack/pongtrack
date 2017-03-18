@@ -58,3 +58,15 @@ video, canvas {
 #sidebar .settings input {
   vertical-align: middle;
 }
+
+.startButton {
+  border-radius: 10%;
+  border: 1px solid green;
+  width: 30%;
+  padding: 20px;
+  font-size: 25px;
+  background-color: green;
+  position: absolute;
+  top:50%;
+  left:35%;
+}

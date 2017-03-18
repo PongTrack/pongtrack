@@ -41,8 +41,11 @@
       <input type='checkbox' id='yellow' onclick="setColor_p1('yellow')">
     </div>
   </div>
-  <div id="divGame">
+  <div id="divGame" >
     <canvas id="game"></canvas>
+  </div>
+  <div id="startButton" >
+    <button onclick="startGame()" class="startButton" > Start </button>
   </div>
 
   <div id="sidebar" class="right">
@@ -85,7 +88,7 @@
   <script src="pong.js" type="text/javascript"></script>
   <script src="controller.js" type="text/javascript"></script>
   <!-- StartTrack -->
-  <script src="track/tracking-min.js"></script>
+  <script src="track/tracking.js"></script>
   <!-- End Track -->
 </body>
 </html>

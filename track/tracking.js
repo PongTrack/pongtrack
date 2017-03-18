@@ -2257,9 +2257,9 @@
 
   tracking.ColorTracker.registerColor('yellow', function(r, g, b) {
     var threshold = 50,
-      dx = r - 255,
-      dy = g - 255,
-      dz = b - 0;
+      dx = r - 226,
+      dy = g - 177,
+      dz = b - 69;
 
     if ((r - b) >= threshold && (g - b) >= threshold) {
       return true;
