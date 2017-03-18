@@ -12,7 +12,7 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  #game    { margin-left: 6em; width: 600px; height: 600px; }
+  #game    { margin-left: 4em; width: 600px; height: 600px; }
 }
 
 @media screen and (min-width: 1600px) {
