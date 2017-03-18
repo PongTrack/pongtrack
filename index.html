@@ -7,12 +7,12 @@
 </head>
 
 <body>
-  <div id="sidebar">
+  <div id="sidebar" class="left">
     <h2>Player 1!</h2>
     </br>
     <div id="camera">
-      <video id="video" width="200" height="150" preload autoplay loop muted controls></video>
-      <canvas id="canvas" width="200" height="150"></canvas>
+      <video id="video_p1" width="200" height="150" preload autoplay loop muted controls></video>
+      <canvas id="canvas_p1" width="200" height="150"></canvas>
     </div>
     </br>
     </br>
@@ -28,21 +28,56 @@
 
     <div class='settings'>
       <label for='cyan'>Cyan: </label>
-      <input type='checkbox' id='cyan' onclick="setColor('cyan')">
+      <input type='checkbox' id='cyan' onclick="setColor_p1('cyan')">
     </div>
 
     <div class='settings'>
       <label for='magenta'>Magenta: </label>
-      <input type='checkbox' id='magenta' onclick="setColor('magenta')" >
+      <input type='checkbox' id='magenta' onclick="setColor_p1('magenta')" >
     </div>
 
     <div class='settings'>
       <label for='yellow'>Yellow: </label>
-      <input type='checkbox' id='yellow' onclick="setColor('yellow')">
+      <input type='checkbox' id='yellow' onclick="setColor_p1('yellow')">
     </div>
   </div>
   <div id="divGame">
     <canvas id="game"></canvas>
+  </div>
+
+  <div id="sidebar" class="right">
+    <h2>Player 2!</h2>
+    </br>
+    <div id="camera">
+      <video id="video_p2" width="200" height="150" preload autoplay loop muted controls></video>
+      <canvas id="canvas_p2" width="200" height="150"></canvas>
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+
+    <div class='settings'>
+      <label for='cyan'>Cyan: </label>
+      <input type='checkbox' id='cyan' onclick="setColor_p2('cyan')">
+    </div>
+
+    <div class='settings'>
+      <label for='magenta'>Magenta: </label>
+      <input type='checkbox' id='magenta' onclick="setColor_p2('magenta')" >
+    </div>
+
+    <div class='settings'>
+      <label for='yellow'>Yellow: </label>
+      <input type='checkbox' id='yellow' onclick="setColor_p2('yellow')">
+    </div>
   </div>
 
 
