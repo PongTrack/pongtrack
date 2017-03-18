@@ -209,7 +209,7 @@ Game = {
     draw: function() {
       this.back2d.clearRect(0, 0, this.width, this.height);
       this.game.draw(this.back2d);
-      this.drawStats(this.back2d);
+      //this.drawStats(this.back2d);
       this.front2d.clearRect(0, 0, this.width, this.height);
       this.front2d.drawImage(this.back, 0, 0);
     },
