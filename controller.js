@@ -25,5 +25,18 @@ window.onload = function() {
       context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
     });
   });
-  colorController(tracker);
+  tracker.setColors([]);
 };
+
+var colorActual = null;
+function setColor(color){
+  if (colorActual == color){
+    tracker.setColors([]);
+    colorActual = null;
+  } else {
+    tracker.setColors([color]);
+    colorActual = color;
+  }
+}
+
+//document.getElementById('yellow').addEventListener("click", myScript);
