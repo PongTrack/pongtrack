@@ -564,6 +564,72 @@ Pong = {
 
   },
 
+
+  //=============================================================================
+  // BONUS
+  //=============================================================================
+
+  Bonus: {
+
+    initialize: function(pong) {
+      this.pong    = pong;
+      this.radius  = pong.cfg.ballRadius;
+      this.minX    = this.radius;
+      this.maxX    = pong.width - this.radius;
+      this.minY    = pong.cfg.wallWidth + this.radius;
+      this.maxY    = pong.height - pong.cfg.wallWidth - this.radius;
+      this.active  = false;
+      //this.speed   = (this.maxX - this.minX) / pong.cfg.ballSpeed;
+      //this.accel   = pong.cfg.ballAccel;
+    },
+
+    reset: function(playerNo) {
+      this.footprints = [];
+      this.setpos(playerNo == 1 ?   this.maxX : this.minX,  Game.random(this.minY, this.maxY));
+      this.setdir(playerNo == 1 ? -this.speed : this.speed, this.speed);
+    },
+
+    setpos: function(x, y) {
+      this.x      = x;
+      this.y      = y;
+      this.left   = this.x - this.radius;
+      this.top    = this.y - this.radius;
+      this.right  = this.x + this.radius;
+      this.bottom = this.y + this.radius;
+    },
+
+    update: function(dt, leftPaddle, rightPaddle) {
+
+      if ((pos.dy > 0) && (pos.y > this.maxY)) {
+        pos.y = this.maxY;
+        pos.dy = -pos.dy;
+      }
+      else if ((pos.dy < 0) && (pos.y < this.minY)) {
+        pos.y = this.minY;
+        pos.dy = -pos.dy;
+      }
+    
+      this.setpos(pos.x,  pos.y);
+      //this.setdir(pos.dx, pos.dy);
+      //this.footprint();
+    },
+
+    draw: function(ctx) {
+      var w = h = this.radius * 2;
+      if (this.active) {
+        ctx.fillStyle = 'black';
+        ctx.fillRect(this.x - this.radius, this.y - this.radius, w, h);
+      }
+      else {
+        ctx.fillStyle = 'red';
+        ctx.fillRect(this.x - this.radius, this.y - this.radius, w, h);
+      }
+    }
+
+  },
+
+
+
   //=============================================================================
   // HELPER
   //=============================================================================
