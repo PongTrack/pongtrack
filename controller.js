@@ -1,6 +1,7 @@
 // Arranquem el Pong
+var pong;
 Game.ready(function() {
-  var pong = Game.start('game', Pong, {});
+  pong = Game.start('game', Pong, {});
 });
 
 var tracker;
@@ -17,6 +18,9 @@ window.onload = function() {
       context.strokeRect(rect.x, rect.y, rect.width, rect.height);
       context.font = '11px Helvetica';
       context.fillStyle = "#fff";
+      //MOVE Y
+      //console.log(pong.Defaults.height);
+      console.log((rect.y*pong.Defaults.height)/canvas.height);
       context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
       context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
     });
