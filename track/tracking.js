@@ -2255,6 +2255,18 @@
     return dx * dx + dy * dy + dz * dz < 19600;
   });
 
+  tracking.ColorTracker.registerColor('red', function(r, g, b) {
+    var threshold = 50,
+      dx = r - 255,
+      dy = g - 0,
+      dz = b - 0;
+
+    if ((r - g) >= threshold && (b - g) >= threshold) {
+      return true;
+    }
+    return dx * dx + dy * dy + dz * dz < 19600;
+  });
+
   tracking.ColorTracker.registerColor('yellow', function(r, g, b) {
     var threshold = 50,
       dx = r - 226,
