@@ -11,8 +11,8 @@
     <h2>Player 1!</h2>
     </br>
     <div id="camera">
-      <video id="video" width="200" height="120" preload autoplay loop muted controls></video>
-      <canvas id="canvas" width="200" height="120"></canvas>
+      <video id="video" width="200" height="150" preload autoplay loop muted controls></video>
+      <canvas id="canvas" width="200" height="150"></canvas>
     </div>
     </br>
     </br>
@@ -28,17 +28,17 @@
 
     <div class='settings'>
       <label for='cyan'>Cyan: </label>
-      <input type='checkbox' id='cyan' onclick="colorController.setColor('cyan')">
+      <input type='checkbox' id='cyan' onclick="setColor('cyan')">
     </div>
 
     <div class='settings'>
       <label for='magenta'>Magenta: </label>
-      <input type='checkbox' id='magenta' onclick="colorController.setColor('magenta')" >
+      <input type='checkbox' id='magenta' onclick="setColor('magenta')" >
     </div>
 
     <div class='settings'>
       <label for='yellow'>Yellow: </label>
-      <input type='checkbox' id='yellow' onclick="colorController.setColor('yellow')">
+      <input type='checkbox' id='yellow' onclick="setColor('yellow')">
     </div>
   </div>
   <div id="divGame">
