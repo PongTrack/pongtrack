@@ -148,7 +148,7 @@
         return this.trackCanvas_(element, tracker, opt_options);
       case 'img':
         return this.trackImg_(element, tracker, opt_options);
-      case 'video':
+      case 'div':
         if (opt_options) {
           if (opt_options.camera) {
             this.initUserMedia_(element, opt_options);
