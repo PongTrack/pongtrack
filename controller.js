@@ -21,7 +21,9 @@ window.onload = function() {
       context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
     });
   });
+  tracker.setColors([]);
 };
+
 var colorActual = null;
 function setColor(color){
   if (colorActual == color){
@@ -31,7 +33,6 @@ function setColor(color){
     tracker.setColors([color]);
     colorActual = color;
   }
-
 }
 
 //document.getElementById('yellow').addEventListener("click", myScript);
