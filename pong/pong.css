@@ -1,0 +1,88 @@
+body {
+  background-color: black;
+  color: #AAA;
+  font-size: 12pt;
+  padding: 1em;
+  font-family: sans-serif !important;
+}
+
+#unsupported { border: 1px solid yellow; color: black; background-color: #FFFFAD; padding: 2em; margin: 1em; display: inline-block; }
+
+@media screen and (min-width: 800px) {
+  #game    { width: 640px; height: 480px; }
+}
+
+@media screen and (min-width: 1200px) {
+  #game    { margin-left: 4em; width: 600px; height: 600px; }
+}
+
+@media screen and (min-width: 1600px) {
+  #game    {  margin-left: 6em; width: 1024px; height: 768px; }
+}
+
+#sidebar {
+  display: block;
+}
+
+video, canvas {
+  position: absolute;
+  margin-left: 20px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+#sidebar {
+  width: 18em;
+  height: 25em;
+  font-size: 0.9em;
+  background-color: #333;
+  border: 1px solid white;
+  padding: 1em;
+}
+#sidebar h2 {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+#sidebar .settings {
+  line-height: 1.2em;
+  height: 1.2em;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+#sidebar .settings label {
+   vertical-align: middle;
+   font-size: 20px;
+   margin-top: 5px;
+}
+#sidebar .settings input {
+  vertical-align: middle;
+}
+
+#sidebar .settings2 {
+  line-height: 1.2em;
+  height: 1.2em;
+  margin-left: 20px;
+  margin-top: 15px;
+  width: 80%;
+  margin-left: 20px;
+  
+}
+
+.startButton {
+  border-radius: 5px;
+  border: 1px solid green;
+  width: 30%;
+  padding: 20px;
+  font-size: 25px;
+  background-color: #00b359;
+  position: absolute;
+  top:50%;
+  left:35%;
+}

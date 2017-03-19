@@ -2,7 +2,21 @@ tournamentApp.controller('tournamentController', ['$scope', function($scope) {
 
   $scope.players = [];
   $scope.addPlayer = function(){
+
     $scope.players.push(angular.copy($scope.player));
+    var i,b;
+    for (i = 0; i < $scope.playersList.length; i++) {
+      if($scope.player.name == $scope.playersList[i].name) {
+        $scope.playersList[i].games++;
+        b = true;
+      }
+    }
+    if (!b) {
+      $scope.player.games = 1;
+      $scope.player.wins = 0;
+      $scope.playersList.push(angular.copy($scope.player));
+    }
+    localStorage.setItem("pongtrack", JSON.stringify($scope.playersList));
     $scope.init();
   }
 
@@ -23,6 +37,14 @@ tournamentApp.controller('tournamentController', ['$scope', function($scope) {
   }
 
   $scope.win4 = function(winner){
+    var i;
+    for (i = 0; i < $scope.playersList.length; i++) {
+      if(winner.name == $scope.playersList[i].name) {
+        $scope.playersList[i].wins++;
+        $scope.playersList[i].games++;
+      }
+    }
+    localStorage.setItem("pongtrack", JSON.stringify($scope.playersList));
     if ($scope.playersRandom2.length == 0){
       $scope.playersRandom2.push({player1: winner});
     } else if ($scope.playersRandom2.length == 1) {
@@ -33,6 +55,14 @@ tournamentApp.controller('tournamentController', ['$scope', function($scope) {
   }
 
   $scope.win8 = function(winner){
+    var i;
+    for (i = 0; i < $scope.playersList.length; i++) {
+      if(winner.name == $scope.playersList[i].name) {
+        $scope.playersList[i].wins++;
+        $scope.playersList[i].games++;
+      }
+    }
+    localStorage.setItem("pongtrack", JSON.stringify($scope.playersList));
     if ($scope.playersRandom4.length == 0){
       $scope.playersRandom4.push({player1: winner});
     } else if ($scope.playersRandom4.length == 1) {
@@ -60,6 +90,7 @@ tournamentApp.controller('tournamentController', ['$scope', function($scope) {
     $scope.playersRandom2 = [];
     $scope.playersRandom4 = [];
     $scope.playersRandom8 = [];
+    $scope.playersList = JSON.parse(localStorage.getItem("pongtrack")) || [];
   }
   $scope.init();
 }]);
